@@ -102,6 +102,33 @@ monitoring via Sentry + the Grafana/Loki stack.
 
 ---
 
+## How the AI Insight Engine Works
+
+```mermaid
+flowchart LR
+    A[Source Data<br/>records & live feeds] --> B[Rules Engine<br/>deterministic outcome]
+    B --> C[LLM Layer<br/>OpenAI + Claude<br/>provider abstraction]
+    C --> D[Validation<br/>grounded vs source<br/>anti-hallucination]
+    D --> E[Insight Out<br/>confidence-tiered<br/>explainable]
+```
+
+*The LLM never invents facts — it explains what the rules engine already decided, and every explanation is validated against the source data before it reaches the user.*
+
+---
+
+## Experience Timeline
+
+```mermaid
+timeline
+    2021 - 2022 : Engineering Simulation & Data Collection (UoN, AMREF) : Python/CFD modelling; led a 35-person data team
+    2023 : Research Assistant, GIS & Spatial Analysis (ORIECO) : County-level suitability mapping across 5 counties
+    2023 - 2024 : Generative AI & ML Trainee (UoN & Reaktor, Helsinki) : Supervised-learning classification models
+    2025 : Member Analytics & Data Analyst (Dudu Sacco) : Arrears segmentation, survey & recruitment analytics
+    2026 - Present : Product Manager & Lead Engineer (Elevika) : AI platforms, forecasting engine, cloud, security & alerting
+```
+
+---
+
 ## Core Skills
 
 **AI / ML** — LLM integration (OpenAI &amp; Claude) · AI insights &amp; explainability · grounded / anti-hallucination validation · time-series forecasting · feature engineering &amp; model validation · scikit-learn · XGBoost
