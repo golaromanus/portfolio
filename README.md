@@ -124,14 +124,14 @@ timeline
     2023 : Research Assistant, GIS & Spatial Analysis (ORIECO) : County-level suitability mapping across 5 counties
     2023 - 2024 : Generative AI & ML Trainee (UoN & Reaktor, Helsinki) : Supervised-learning classification models
     2025 : Member Analytics & Data Analyst (Dudu Sacco) : Arrears segmentation, survey & recruitment analytics
-    2026 - Present : Product Manager & Lead Engineer (Elevika) : AI platforms, forecasting engine, cloud, security & alerting
+    2026 - Present : Chief Technology Officer (Elevika) : AI platforms, forecasting engine, cloud, security & alerting
 ```
 
 ---
 
 ## Core Skills
 
-**AI / ML** — LLM integration (OpenAI &amp; Claude) · AI insights &amp; explainability · grounded / anti-hallucination validation · time-series forecasting · feature engineering &amp; model validation · scikit-learn · XGBoost
+**AI / ML** — LLM integration · AI insights &amp; explainability · grounded / anti-hallucination validation · time-series forecasting · feature engineering &amp; model validation · scikit-learn · XGBoost
 
 **Backend / Data** — Python · FastAPI · TypeScript · NestJS · REST APIs · PostgreSQL · Prisma · Redis · data pipelines &amp; systems architecture · multi-tenant design
 
