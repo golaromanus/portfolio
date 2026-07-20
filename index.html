@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romanus Ogolla — AI &amp; Full-Stack Systems Engineer</title>
+<meta name="description" content="Portfolio of Romanus Ogolla — AI, Machine Learning and Full-Stack Systems Engineer. Production AI insight engines, predictive ML, cloud and security.">
+<style>
+  :root {
+    --bg: #f5f4f9;
+    --panel: #ffffff;
+    --ink: #23222b;
+    --ink-soft: #4c4b58;
+    --muted: #7c7a8a;
+    --line: #e3e1ec;
+    --accent: #5b4b8a;
+    --accent-2: #7a6bb0;
+    --accent-ink: #4a3d76;
+    --chip: #efedf6;
+    --tag-bg: #ece9f5;
+    --tag-ink: #5b4b8a;
+    --shadow: 0 1px 2px rgba(40,30,70,.04), 0 10px 34px rgba(40,30,70,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131019; --panel: #1c1826; --ink: #ece9f4; --ink-soft: #bcb6cc;
+      --muted: #8b849c; --line: #2c2740; --accent: #9d8dd0; --accent-2: #b3a6dd;
+      --accent-ink: #b9acde; --chip: #241f33; --tag-bg: #2a2440; --tag-ink: #c3b8e6;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 36px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"]{--bg:#f5f4f9;--panel:#fff;--ink:#23222b;--ink-soft:#4c4b58;--muted:#7c7a8a;--line:#e3e1ec;--accent:#5b4b8a;--accent-2:#7a6bb0;--accent-ink:#4a3d76;--chip:#efedf6;--tag-bg:#ece9f5;--tag-ink:#5b4b8a;--shadow:0 1px 2px rgba(40,30,70,.04),0 10px 34px rgba(40,30,70,.07);}
+  :root[data-theme="dark"]{--bg:#131019;--panel:#1c1826;--ink:#ece9f4;--ink-soft:#bcb6cc;--muted:#8b849c;--line:#2c2740;--accent:#9d8dd0;--accent-2:#b3a6dd;--accent-ink:#b9acde;--chip:#241f33;--tag-bg:#2a2440;--tag-ink:#c3b8e6;--shadow:0 1px 2px rgba(0,0,0,.4),0 12px 36px rgba(0,0,0,.4);}
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Arial, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: clamp(28px,5vw,64px) clamp(18px,4vw,40px) 72px; }
+
+  /* hero */
+  .hero { position: relative; margin-bottom: 40px; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent-ink); font-weight: 700; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content:""; width:28px; height:2px; background:var(--accent); }
+  h1 { font-size: clamp(30px,5.5vw,52px); line-height: 1.04; letter-spacing:-.02em; font-weight: 800; }
+  .role { color: var(--accent); font-size: clamp(16px,2.4vw,21px); font-weight: 600; margin-top: 8px; }
+  .intro { max-width: 64ch; color: var(--ink-soft); font-size: clamp(14px,1.7vw,16.5px); margin-top: 16px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 22px; font-size: 14px; align-items:center; }
+  .links a { color: var(--accent-ink); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; }
+  .links a:hover, .links a:focus { border-bottom-color: var(--accent); }
+  .links span.sep { color: var(--muted); }
+  .callout {
+    margin-top: 24px; background: var(--chip); border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0; padding: 14px 18px; font-size: 14px; color: var(--ink-soft);
+    max-width: 70ch;
+  }
+  .callout b { color: var(--ink); }
+
+  /* section */
+  .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 46px 0 20px; }
+  .sec-head h2 { font-size: 20px; font-weight: 750; letter-spacing:-.01em; }
+  .sec-head .rule { flex: 1; height: 1px; background: var(--line); }
+
+  /* project grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 18px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px 22px 20px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 12px;
+    transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(40,30,70,.08), 0 18px 44px rgba(40,30,70,.12); }
+  .card h3 { font-size: 16.5px; font-weight: 730; letter-spacing:-.01em; display:flex; align-items:center; gap:9px; }
+  .card h3 .ic { font-size: 18px; }
+  .card p { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
+  .card p b { color: var(--ink); font-weight: 650; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags .t { font-size: 11px; font-weight: 600; background: var(--tag-bg); color: var(--tag-ink); padding: 3px 9px; border-radius: 6px; }
+
+  /* skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 16px; }
+  .skill-block { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .skill-block h4 { font-size: 12px; text-transform: uppercase; letter-spacing:.08em; color: var(--accent-ink); margin-bottom: 8px; }
+  .skill-block p { font-size: 13px; color: var(--ink-soft); }
+
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: 12.5px; }
+
+  a.btn {
+    display:inline-block; background: var(--accent); color:#fff; text-decoration:none;
+    font-weight:600; font-size:13.5px; padding:8px 16px; border-radius:8px;
+  }
+  a.btn:hover { background: var(--accent-2); }
+  @media (prefers-reduced-motion: reduce){ .card{transition:none;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Portfolio</div>
+    <h1>Romanus Ogolla</h1>
+    <div class="role">AI, Machine Learning &amp; Full-Stack Systems Engineer</div>
+    <p class="intro">
+      I build and ship production digital systems end to end — predictive time-series models,
+      LLM-powered analytics and insight engines, automated data pipelines, REST APIs, cloud
+      deployment, security hardening and SMS/WhatsApp alerting. Biosystems &amp; Environmental
+      Engineering background with hands-on GIS and spatial-analysis experience.
+    </p>
+    <div class="links">
+      <a href="https://github.com/golaromanus">github.com/golaromanus</a>
+      <span class="sep">·</span>
+      <a href="mailto:golaromanus@gmail.com">golaromanus@gmail.com</a>
+      <span class="sep">·</span>
+      <span style="color:var(--muted)">Nairobi, Kenya</span>
+    </div>
+    <div class="callout">
+      <b>Source code is in private / production repositories.</b>
+      Full code walkthrough and live demonstrations available on request. The projects below are
+      real, deployed production systems.
+    </div>
+  </header>
+
+  <div class="sec-head"><h2>Selected Projects</h2><span class="rule"></span></div>
+  <div class="grid">
+
+    <div class="card">
+      <h3><span class="ic">🧠</span>AI Analytics &amp; Insights Platform</h3>
+      <p>A production <b>AI insight engine</b> with a <b>multi-provider LLM integration</b> (OpenAI + Claude) behind a clean provider-abstraction layer — generating deep-analysis explanations with an <b>anti-hallucination validation layer</b> that grounds every output against source data, plus a hybrid rules-engine + AI pipeline with confidence tiers.</p>
+      <div class="tags"><span class="t">TypeScript</span><span class="t">NestJS</span><span class="t">OpenAI</span><span class="t">Claude</span><span class="t">PostgreSQL</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ic">📈</span>Time-Series Forecasting Engine</h3>
+      <p>An end-to-end <b>predictive ML system</b>: a 15-feature engineering pipeline, scikit-learn / XGBoost models with a deep-learning path, an <b>offline validation harness</b> (calibration &amp; back-testing) and a <b>deployed FastAPI inference service</b> that learns continuously from live data.</p>
+      <div class="tags"><span class="t">Python</span><span class="t">scikit-learn</span><span class="t">XGBoost</span><span class="t">FastAPI</span><span class="t">Docker</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ic">🏢</span>Qartit — Multi-Tenant Platform</h3>
+      <p>A <b>multi-tenant SaaS platform</b> with isolated master + per-tenant databases and migrations, served through an api / web / worker architecture with a <b>full observability stack</b> (Grafana · Loki · Promtail · pgBouncer).</p>
+      <div class="tags"><span class="t">Next.js</span><span class="t">Prisma</span><span class="t">PostgreSQL</span><span class="t">Redis</span><span class="t">Grafana</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ic">🔐</span>UnikQR — Hardened System + AI Insights</h3>
+      <p>An api / web / worker system with a background <b>AI-insights worker</b> (Claude) and a security-hardened deployment: <b>UFW + Cloudflare firewall</b>, automatic TLS via Caddy, and <b>automated backup &amp; restore runbooks</b>.</p>
+      <div class="tags"><span class="t">TypeScript</span><span class="t">Docker</span><span class="t">Caddy</span><span class="t">UFW</span><span class="t">Claude</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ic">💳</span>Payliper — Payments Platform</h3>
+      <p>A payments platform spanning <b>web + Android + api/worker</b> in one monorepo, with <b>SMS / WhatsApp notification integration</b> (Twilio · Africa's Talking) and a containerised deploy.</p>
+      <div class="tags"><span class="t">Turborepo</span><span class="t">Android</span><span class="t">Twilio</span><span class="t">Docker</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ic">⚙️</span>Cloud, CI/CD &amp; Delivery</h3>
+      <p>Reproducible releases across all projects: <b>GitHub Actions → immutable GHCR images → SSH deploy</b> with Docker Compose and Caddy (auto-TLS), non-root service users, secrets management and monitoring via Sentry + the Grafana/Loki stack.</p>
+      <div class="tags"><span class="t">GitHub Actions</span><span class="t">GHCR</span><span class="t">Docker Compose</span><span class="t">Caddy</span><span class="t">Sentry</span></div>
+    </div>
+
+  </div>
+
+  <div class="sec-head"><h2>Core Skills</h2><span class="rule"></span></div>
+  <div class="skills">
+    <div class="skill-block">
+      <h4>AI / Machine Learning</h4>
+      <p>LLM integration (OpenAI &amp; Claude) · AI insights &amp; explainability · grounded / anti-hallucination validation · time-series forecasting · feature engineering &amp; model validation · scikit-learn · XGBoost</p>
+    </div>
+    <div class="skill-block">
+      <h4>Backend &amp; Data</h4>
+      <p>Python · FastAPI · TypeScript · NestJS · REST APIs · PostgreSQL · Prisma · Redis · data pipelines &amp; systems architecture · multi-tenant design</p>
+    </div>
+    <div class="skill-block">
+      <h4>Cloud · DevOps · Security</h4>
+      <p>Docker · CI/CD · GHCR · Caddy · cloud deployment &amp; system administration · security hardening (UFW · Cloudflare · TLS) · backup/restore runbooks · monitoring (Grafana · Loki · Sentry)</p>
+    </div>
+    <div class="skill-block">
+      <h4>Integrations &amp; Other</h4>
+      <p>SMS / WhatsApp / email alerting (Twilio · Africa's Talking · Nodemailer) · GIS &amp; spatial suitability analysis · Full-stack (Next.js) · Linux · C++ · CAD (AutoCAD · SolidWorks · ANSYS)</p>
+    </div>
+  </div>
+
+  <footer>
+    © Romanus Ogolla · Full source code and live demos available on request · golaromanus@gmail.com
+  </footer>
+</div>
+
+<script>
+  // respect the viewer's saved theme toggle if GitHub Pages ever adds one; harmless otherwise
+  (function(){ try { var t = localStorage.getItem('theme'); if(t) document.documentElement.setAttribute('data-theme', t); } catch(e){} })();
+</script>
+</body>
+</html>
